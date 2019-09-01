@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d8c5ff6-9c38-480b-9e3b-181308841fc0" name="Default" comment="" />
+    <list default="true" id="7d8c5ff6-9c38-480b-9e3b-181308841fc0" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,19 +46,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootstrap.css.map" pinned="false" current-in-tab="false">
+      <file leaf-file-name="bootstrap.css.map" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/bootstrap-4.3.1-dist/css/bootstrap.css.map">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="550">
               <caret column="1614" lean-forward="true" selection-start-column="1614" selection-end-column="1614" />
             </state>
           </provider>
-          <provider editor-type-id="sourcemapFileViewerProvider" />
-        </entry>
-      </file>
-      <file leaf-file-name="style.css.map" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assets/css/style.css.map">
-          <provider selected="true" editor-type-id="text-editor" />
           <provider editor-type-id="sourcemapFileViewerProvider" />
         </entry>
       </file>
@@ -76,6 +74,9 @@
       <find>отступы</find>
       <find>margin</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -109,12 +110,13 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="241" />
     <option name="y" value="3" />
     <option name="width" value="1089" />
     <option name="height" value="744" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -149,14 +151,9 @@
               <item name="bs4.loc" type="b2602c69:ProjectViewProjectNode" />
               <item name="bs4.loc" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap-4.3.1-dist" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bs4.loc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bs4.loc" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="style.css" type="620a8d5e:NestingTreeNode" />
+              <item name="bootstrap.css" type="620a8d5e:NestingTreeNode" />
             </path>
             <path>
               <item name="bs4.loc" type="b2602c69:ProjectViewProjectNode" />
@@ -210,12 +207,12 @@
       <workItem from="1566923674604" duration="31671000" />
       <workItem from="1567091055735" duration="21662000" />
       <workItem from="1567231186939" duration="4158000" />
-      <workItem from="1567240634258" duration="21590000" />
+      <workItem from="1567240634258" duration="22735000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79081000" />
+    <option name="totallyTimeSpent" value="80226000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="241" y="3" width="1089" height="744" extended-state="0" />
@@ -223,7 +220,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26467848" />
@@ -348,16 +345,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/style.css.map">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="sourcemapFileViewerProvider" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/bootstrap-4.3.1-dist/css/bootstrap.css.map">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
           <caret column="1614" lean-forward="true" selection-start-column="1614" selection-end-column="1614" />
         </state>
       </provider>
-      <provider editor-type-id="sourcemapFileViewerProvider" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/style.css.map">
-      <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="sourcemapFileViewerProvider" />
     </entry>
   </component>

@@ -28,6 +28,18 @@ function mapping() {
             .pipe(gulp.dest('./assets/css'));
 }
 
+function mappingMin() {
+     return gulp.src('./assets/scss/**/*.scss')
+            .pipe(sourcemaps.init())
+            .pipe(sass().on('error', sass.logError))
+
+            .pipe(cssMin())
+            .pipe(rename({suffix: '.min'}))
+            
+            .pipe(sourcemaps.write('./'))
+            .pipe(gulp.dest('./assets/css'));
+}
+
 
 // bootstrap.sass
 // function bootstrapSassCompile() {
@@ -61,8 +73,9 @@ function watchFiles() {
 // exports.html = html;
 exports.myScssCompiler = myScssCompiler;
 exports.mapping = mapping;
+exports.mappingMin = mappingMin;
 // exports.clear = clear;
 exports.watchFiles = watchFiles;
 exports.server = server;
 
-exports.default = gulp.parallel(myScssCompiler, mapping, watchFiles, server); // exports.clear = clear - убрал из списка так как удаляет JSON папку
+exports.default = gulp.parallel(myScssCompiler, mapping, mappingMin, watchFiles, server); // exports.clear = clear - убрал из списка так как удаляет JSON папку
