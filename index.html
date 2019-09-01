@@ -1,0 +1,997 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+
+    <!--my styles-->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <title>Bootstrap 4</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 block1">Content</div>
+            <div class="col-md-8 block2">Sidebar</div>
+        </div>
+    </div>
+    <!--пустая строка-->
+    <div class="container">
+        <div class="row">
+            <div class="col">Колонки одинаковой ширины</div>
+        </div>
+    </div>
+
+    <!--Колонки одинаковой ширины-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md block1">1</div>
+            <div class="col-md block2">2</div>
+            <div class="col-md block3">3</div>
+            <div class="col-md block4">4</div>
+            <div class="col-md block5">5</div>
+        </div>
+    </div>
+
+    <!--контент переменной ширины с центрированием-->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">***</div>
+            <div class="col">контент переменной ширины с центрированием</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-lg-2 block1">1</div>
+            <div class="col-12 col-md-auto block3">Lorem ipsum dolor sit amet.</div>
+            <div class="col-lg-2 block2">2</div>
+        </div>
+    </div>
+
+    <!--класс w-100-->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">***</div>
+            <div class="col">класс w-10</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col block1">1</div>
+            <div class="col block2">2</div>
+            <!--место переноса class="w-100"-->
+            <div class="w-100"></div>
+            <div class="col block3">3</div>
+            <div class="col block4">4</div>
+        </div>
+    </div>
+
+
+    <!--Урок 6-->
+    <!--выравнивание по вертикали и горизонтали-->
+    <!--align-items: flex-start | center | flex-end-->
+    <div class="container">
+        <br><hr>
+        <!--выравнивание рядов по вертикали-->
+        <div class="row justify-content-md-center">
+            <h4 class="col-auto">выравнивание рядов по вертикали align-items</h4>
+            <div class="w-100"></div>
+            <p class="col-auto">
+                class= align-items-start | align-items-center | align-items-end | align-items-baseline |  align-self-stretch
+            </p>
+        </div>
+        <div class="row mh align-items-start">
+            <div class="col block1">align-items-start</div>
+            <div class="col block2">align-items-start</div>
+            <div class="col block3">align-items-start</div>
+        </div> <!--по умолч.-->
+        <div class="row mh align-items-center">
+            <div class="col block1">align-items-center</div>
+            <div class="col block2">align-items-center</div>
+            <div class="col block3">align-items-center</div>
+        </div>
+        <div class="row mh align-items-end">
+            <div class="col block1">align-items-end</div>
+            <div class="col block2">align-items-end</div>
+            <div class="col block3">align-items-end</div>
+        </div>
+        <div class="row mh align-items-baseline">
+            <div class="col block1">align-items-baseline</div>
+            <div class="col block2">align-items-baseline</div>
+            <div class="col block3">align-items-baseline</div>
+        </div>
+        <div class="row mh align-items-stretch">
+            <div class="col block1">align-items-stretch</div>
+            <div class="col block2">align-items-stretch</div>
+            <div class="col block3">align-items-stretch</div>
+        </div>
+
+
+        <br><hr>
+        <!--выравнивание колонок по вертикали align-self-->
+        <div class="row justify-content-md-center">
+            <h4 class="col-auto">выравнивание колонок по вертикали align-self</h4>
+            <div class="w-100"></div>
+            <p class="col-auto">
+                class= align-self-start | align-self-center | align-self-end | align-self-baseline |  align-self-stretch выравнивание по вертикали колонок
+            </p>
+        </div>
+        <div class="row mh">
+            <div class="col block1 align-self-start">align-self-start</div>
+            <div class="col block2 align-self-center">align-self-center</div>
+            <div class="col block3 align-self-end">align-self-end</div>
+            <div class="col block4 align-self-baseline">align-self-baseline</div>
+            <div class="col block5 align-self-stretch">align-self-baseline</div>
+        </div>
+
+        <br><hr>
+        <!--горизонтальное выравнивание-->
+        <div class="row justify-content-md-center">
+            <h4 class="col-auto">горизонтальное выравнивание внутри ряда: justify-content</h4>
+            <div class="w-100"></div>
+            <p class="col-auto">
+                class= justify-content-start | justify-content-center | justify-content-end | content-between |  justify-content-around
+            </p>
+            <p>класс justify-content-... не работает если вместе с ним указать колоночный класс</p>
+        </div>
+        <div class="row mh justify-content-start">
+            <div class="col-3 block1">justify-content-start</div>
+            <div class="col-3 block2">justify-content-start</div>
+        </div>
+        <div class="row mh justify-content-center">
+            <div class="col-3 block1">justify-content-center</div>
+            <div class="col-3 block2">justify-content-center</div>
+        </div>
+        <div class="row mh justify-content-end">
+            <div class="col-3 block1">justify-content-end</div>
+            <div class="col-3 block2">justify-content-end</div>
+        </div>
+        <div class="row mh justify-content-between">
+            <div class="col-3 block1">justify-content-between</div>
+            <div class="col-3 block2">justify-content-between</div>
+        </div>
+        <div class="row mh justify-content-around">
+            <div class="col-3 block1">justify-content-around</div>
+            <div class="col-3 block2">justify-content-around</div>
+        </div>
+    </div>
+
+    <br><hr>
+    <!--1я секция занимает всю доступню ширину выравнивание по самому центру-->
+    <!--<div class="row justify-content-center">-->
+        <!--<h4 class="col-auto">выравнивание по самому центру</h4>-->
+    <!--</div>-->
+    <!--<section class="section1">-->
+        <!--<div class="container">-->
+            <!--<div class="row align-items-center justify-content-center">-->
+                <!--<div class="col-md-5 text-center">-->
+                    <!--<h2>Сатурн</h2>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</section>-->
+
+
+    <!--Урок 7-->
+    <section>
+        <div class="container">
+            <br><hr>
+            <!--сброс отступов-->
+            <div class="row justify-content-center">
+                <h2 class="col-auto">Урок 7</h2>
+                <div class="w-100"></div>
+                <h4 class="col-auto">сброс отступов</h4>
+            </div>
+            <div class="row no-gutters">
+                <div class="col block1">1</div>
+                <div class="col block2">2</div>
+                <div class="col block3">3</div>
+            </div>
+
+            <br><hr>
+            <!--Изменение порядка следования элементов-->
+            <div class="row justify-content-center">
+                <h4 class="col-auto">Изменение порядка следования элементов</h4>
+                <div class="w-100"></div>
+                <p class="col-auto">Классы: order-1 order-2 order-n</p>
+            </div>
+            <div class="row">
+                <div class="col block1 order-3">1</div>
+                <div class="col block2 order-1">2</div>
+                <div class="col block3 order-2">3</div>
+            </div>
+
+            <br><hr>
+            <!--Offsetting columns - отступы-->
+            <div class="row justify-content-center">
+                <h4 class="col-auto">Offsetting columns - отступы</h4>
+                <div class="w-100"></div>
+                <p class="col-auto">Классы: offset-....</p>
+            </div>
+            <div class="row mh">
+                <div class="col-4 block1 offset-8">col-4 block1 offset-8</div>
+            </div>
+            <div class="row mh">
+                <div class="offset-8 col-4 block1">offset-8 col-4 block1</div>
+            </div>
+            <div class="row mh">
+                <div class="offset-4 col-4 block3 offset-4">offset-4 col-4 block3 offset-4</div>
+            </div>
+
+            <br><hr>
+            <!--Классы push( на право -> ) и pull( налево <- )-->
+            <div class="row justify-content-center">
+                <h4 class="col-auto">Классы push( на право -> ) и pull( налево <- )</h4>
+                <div class="w-100"></div>
+                <p class="col-auto">Классы: push pull</p>
+            </div>
+            <div class="row">
+                <div class="col-md-8 block2 order-md-2">Content</div>
+                <div class="col-md-4 block1 order-md-1">Sidebar</div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Урок 8-->
+    <section>
+        <div class="container">
+            <br><br><hr>
+            <!--сброс отступов-->
+            <div class="row justify-content-center">
+                <h2 class="col-auto">Урок 8</h2>
+                <div class="w-100"></div>
+                <h4 class="col-auto">Responsive utilities</h4>
+                <div class="w-100"></div>
+                <a class="col-4"  href="https://bootstrap-4.ru/docs/4.3.1/utilities/display/#hiding-elements" target="_blank">Скрытие элементов, классы</a>
+                <a class="col-4" href="https://bootstrap-4.ru/docs/4.3.1/migration/#responsive-utilities" target="_blank">Изменения BS4 - Отзывчивые утилиты</a>
+                <div class="w-100"></div>
+                <p class="col-auto">
+                    d-lg-none - Скрыто на экранах шире lg; d-none d-lg-block - Скрыто на экранах меньше lg
+                </p>
+
+            </div>
+            <div class="row">
+                <div class="col block1">1</div>
+                <div class="col block2">2</div>
+                <div class="w-100 d-md-none"></div>
+                <div class="col block3">3</div>
+                <div class="col block4">4</div>
+            </div>
+            <div class="container d-none d-md-block">
+                <div class="row mh align-items-center justify-content-center">
+                    <div class="col-4 text-center block5">"Этот блок скрыт на экранах меньше md</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="les-09">
+        <div class="container">
+            <br><br><hr>
+            <!--Медиа объект Bootstrap-->
+            <div class="row justify-content-center">
+                <h2 class="col-auto">Урок 9</h2>
+                <div class="w-100"></div>
+                <h4 class="col-auto">Медиа объект Bootstrap</h4>
+                <div class="w-100"></div>
+                <a class="col-auto"  href="#" target="_blank">оф.док.</a>
+                <div class="w-100"></div>
+                <p class="col-auto">
+                    Spacing utilities это сокращенные css св-ва, такие как например
+                    margin это просто m, margin-top это просто mt и т.д. значения
+                    задаются просто в цыфрах от 1 до 5 например mt-3
+                </p>
+                <div class="w-100"></div>
+                <hr>
+                <h4 class="col-auto">Комменатрий</h4>
+            </div>
+
+            <!--комментарий-->
+            <!--<div class="row">-->
+                <!--<div class="col">-->
+                    <!--&lt;!&ndash;Media object&ndash;&gt;-->
+                    <!--<div class="media mt-5">-->
+                        <!--<img class="d-flex mr-3" src="assets/images/min/Galileo-Galilei-150x150.jpg" alt="">-->
+                        <!--<div class="media-body">-->
+                            <!--<h5>Заголовок комментария</h5>-->
+                            <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur eligendi et-->
+                                <!--explicabo in libero maiores mollitia necessitatibus, nobis sunt. Aperiam architecto-->
+                                <!--beatae facere facilis iste itaque libero repellat ut.</p>-->
+                            <!--<p>Corporis deleniti deserunt distinctio doloremque error facere fugiat fugit harum-->
+                                <!--inventore itaque laboriosam laudantium magnam, molestiae nostrum nulla numquam obcaecati-->
+                                <!--odio quam quas quisquam, quo rem repudiandae similique sunt ut?</p>-->
+                            <!--<p>Amet consequuntur doloribus ducimus esse eveniet expedita inventore labore officiis omnis-->
+                                <!--optio quo ratione, reprehenderit totam vitae voluptatibus? Atque delectus exercitationem-->
+                                <!--expedita harum magnam maxime perspiciatis placeat quae, totam voluptatibus?</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <br><br><hr>
+            <!--дерево комментариев-->
+            <div class="row justify-content-center">
+                <h4 class="col-auto">Дерево комментариев, Nesting</h4>
+                <div class="w-100"></div>
+                <a class="col-auto"  href="#" target="_blank">оф.док.</a>
+            </div>
+            <!--<div class="row">-->
+                <!--<div class="col">-->
+                    <!--<div class="media mt-5">-->
+                        <!--<img class="d-flex mr-3" src="assets/images/min/Galileo-Galilei-150x150.jpg" alt="">-->
+                        <!--<div class="media-body">-->
+                            <!--<h5>Заголовок комментария</h5>-->
+                            <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur eligendi et-->
+                                <!--explicabo in libero maiores mollitia necessitatibus, nobis sunt. Aperiam architecto-->
+                                <!--beatae facere facilis iste itaque libero repellat ut.</p>-->
+                            <!--<p>Corporis deleniti deserunt distinctio doloremque error facere fugiat fugit harum-->
+                                <!--inventore itaque laboriosam laudantium magnam, molestiae nostrum nulla numquam obcaecati-->
+                                <!--odio quam quas quisquam, quo rem repudiandae similique sunt ut?</p>-->
+                            <!--<p>Amet consequuntur doloribus ducimus esse eveniet expedita inventore labore officiis omnis-->
+                                <!--optio quo ratione, reprehenderit totam vitae voluptatibus? Atque delectus exercitationem-->
+                                <!--expedita harum magnam maxime perspiciatis placeat quae, totam voluptatibus?</p>-->
+                            <!--<div class="media mt-5">-->
+                                <!--<img class="d-flex mr-3" src="assets/images/min/kopernik-150x150.jpg" alt="">-->
+                                <!--<div class="media-body">-->
+                                    <!--<h5>Заголовок комментария</h5>-->
+                                    <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur eligendi et-->
+                                        <!--explicabo in libero maiores mollitia necessitatibus, nobis sunt. Aperiam architecto-->
+                                        <!--beatae facere facilis iste itaque libero repellat ut.</p>-->
+                                    <!--<p>Corporis deleniti deserunt distinctio doloremque error facere fugiat fugit harum-->
+                                        <!--inventore itaque laboriosam laudantium magnam, molestiae nostrum nulla numquam obcaecati-->
+                                        <!--odio quam quas quisquam, quo rem repudiandae similique sunt ut?</p>-->
+                                    <!--<p>Amet consequuntur doloribus ducimus esse eveniet expedita inventore labore officiis omnis-->
+                                        <!--optio quo ratione, reprehenderit totam vitae voluptatibus? Atque delectus exercitationem-->
+                                        <!--expedita harum magnam maxime perspiciatis placeat quae, totam voluptatibus?</p>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <br><br><hr>
+            <!--порядок следования медиа элементов-->
+            <div class="row justify-content-center">
+                <h4 class="col-auto">Порядок следования медиа элементов</h4>
+                <div class="w-100"></div>
+                <a class="col-auto"  href="#" target="_blank">оф.док.</a>
+                <div class="w-100"></div>
+                <p>
+                    Порядок следования элементов можно поменять явно,
+                    т.е. поменять элементы местами, либо можно использ. классы
+                    order-N
+                </p>
+            </div>
+            <!--<div class="row">-->
+                <!--<div class="col">-->
+                    <!--&lt;!&ndash;Media object&ndash;&gt;-->
+                    <!--<div class="media mt-5">-->
+                        <!--<img class="d-flex ml-3 order-1" src="assets/images/min/Galileo-Galilei-150x150.jpg" alt="">-->
+                        <!--<div class="media-body order-0">-->
+                            <!--<h5>Заголовок комментария</h5>-->
+                            <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur eligendi et-->
+                                <!--explicabo in libero maiores mollitia necessitatibus, nobis sunt. Aperiam architecto-->
+                                <!--beatae facere facilis iste itaque libero repellat ut.</p>-->
+                            <!--<p>Corporis deleniti deserunt distinctio doloremque error facere fugiat fugit harum-->
+                                <!--inventore itaque laboriosam laudantium magnam, molestiae nostrum nulla numquam obcaecati-->
+                                <!--odio quam quas quisquam, quo rem repudiandae similique sunt ut?</p>-->
+                            <!--<p>Amet consequuntur doloribus ducimus esse eveniet expedita inventore labore officiis omnis-->
+                                <!--optio quo ratione, reprehenderit totam vitae voluptatibus? Atque delectus exercitationem-->
+                                <!--expedita harum magnam maxime perspiciatis placeat quae, totam voluptatibus?</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <br><br><hr>
+            <!--Медиа список-->
+            <div class="row justify-content-center">
+                <h4 class="col-auto">Медиа список, Media list</h4>
+                <div class="w-100"></div>
+                <a class="col-auto"  href="#" target="_blank">оф.док.</a>
+                <!--<div class="w-100"></div>-->
+                <!--<p>-->
+                    <!--Порядок следования элементов можно поменять явно,-->
+                    <!--т.е. поменять элементы местами, либо можно использ. классы-->
+                    <!--order-N-->
+                <!--</p>-->
+            </div>
+            <!--<div class="row">-->
+                <!--<ul class="list-unstyled mt-5">-->
+                    <!--<li class="media my-3">-->
+                        <!--<img class="d-flex mr-3" src="assets/images/min/Galileo-Galilei-150x150.jpg" alt="">-->
+                        <!--<div class="media-body">-->
+                            <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur eligendi et-->
+                                <!--explicabo in libero maiores mollitia necessitatibus, nobis sunt. Aperiam architecto-->
+                                <!--beatae facere facilis iste itaque libero repellat ut.</p>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                    <!--<li class="media my-3">-->
+                        <!--<img class="d-flex mr-3" src="assets/images/min/kopernik-150x150.jpg" alt="">-->
+                        <!--<div class="media-body">-->
+                            <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur eligendi et-->
+                                <!--explicabo in libero maiores mollitia necessitatibus, nobis sunt. Aperiam architecto-->
+                                <!--beatae facere facilis iste itaque libero repellat ut.</p>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                    <!--<li class="media my-3">-->
+                        <!--<img class="d-flex mr-3" src="assets/images/min/Johannes_Kepler_1610-150x150.jpg" alt="">-->
+                        <!--<div class="media-body">-->
+                            <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur eligendi et-->
+                                <!--explicabo in libero maiores mollitia necessitatibus, nobis sunt. Aperiam architecto-->
+                                <!--beatae facere facilis iste itaque libero repellat ut.</p>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+
+        </div>
+    </section>
+
+    <section class="les-10">
+        <div class="container">
+            <br><br><hr>
+            <!--Адаптивные изображения и видео в Bootstrap-->
+            <div class="row justify-content-center">
+                <h2 class="col-auto">Урок 10</h2>
+                <div class="w-100"></div>
+                <h4 class="col-auto">Адаптивные изображения и видео в Bootstrap</h4>
+                <div class="w-100"></div>
+                <a class="col-auto"  href="#" target="_blank">оф.док.</a>
+                <div class="w-100"></div>
+                <p class="col-auto">
+                    классы: img-fluid, тоже самое что и img { width: 100%; height: auto; }
+                </p>
+            </div>
+            <!--Адаптивная картинка-->
+            <div class="row">
+                <div class="col mt-3">
+                    <h5 class="text-center">Адаптивная картинка</h5>
+                    <img class="img-fluid" src="assets/images/03_earth.jpg" alt="">
+                </div>
+            </div>
+            <br><br><hr>
+            <!--Изображение в виде аватарки-->
+            <div class="row">
+                <div class="col">
+                    <h5 class="text-center">Изображение в виде аватарки</h5>
+                    <img class="img-fluid img-thumbnail float-sm-left d-block mx-auto mr-sm-3" src="assets/images/min/kopernik-150x150.jpg" alt="">
+                    <p>Картинка обтекается текстом за счет классов: float-left | right | none</p>
+                    <p>Cum dolore nemo provident ratione sit vero voluptatum. Autem blanditiis culpa eaque, hic iure
+                        minus quisquam velit vero voluptatibus! Assumenda aut enim explicabo, fugiat natus officiis
+                        reprehenderit sapiente sed tenetur?</p>
+                    <p>Amet, atque beatae distinctio dolore eum, ex impedit iste nesciunt nulla perferendis provident
+                        tempore, tenetur voluptas? Aperiam asperiores assumenda, debitis deserunt dolores eius illum
+                        inventore nisi nobis nulla soluta, tempore!</p>
+                </div>
+            </div>
+
+            <br><br><hr>
+            <!--Рамки картинки-->
+            <div class="row">
+                <div class="col">
+                    <h5 class="text-center">Рамки картинки</h5>
+                    <img class="img-thumbnail d-block float-sm-left mx-auto mr-sm-3 border-primary rounded-circle" src="assets/images/min/kopernik-150x150.jpg" alt="">
+                    <p>классы отображания границ рамки: border, border-0, border-top-0, border-right-0 и т.д. см. оф.док.</p>
+                    <p>классы цвета границ рамки: например border-primary и т.д. см. оф.док. классы утилиты цвета</p>
+                    <p>классы скругления границ рамки: например rounded-circle и т.д. см. оф.док.</p>
+                </div>
+            </div>
+
+            <br><br><hr>
+            <!--Адаптивное видео-->
+            <div class="row">
+                <div class="col-4">
+                    <h5 class="text-center">Адаптивное видео</h5>
+                </div>
+                <!--<div class="w-100"></div>-->
+                <div class="col-8">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <!--<iframe src="video/les-10.mp4" frameborder="0" class="embed-responsive-item"></iframe>-->
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/eknD3g73wr0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <br><br><hr>
+            <!--Адаптивное видео по центру-->
+            <div class="row">
+                <div class="col">
+                    <h5 class="text-center">Адаптивное видео по центру</h5>
+                </div>
+                <div class="w-100"></div>
+
+                <div class="col-8 mx-auto">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <!--<iframe src="video/les-10.mp4" frameborder="0" class="embed-responsive-item"></iframe>-->
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/eknD3g73wr0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="les-11">
+        <div class="container">
+            <br><br><hr>
+            <!--Таблицы-->
+            <div class="row justify-content-center">
+                <h2 class="col-auto">Урок 11</h2>
+                <div class="w-100"></div>
+                <h4 class="col-auto">Таблицы</h4>
+                <div class="w-100"></div>
+                <a class="col-auto"  href="#" target="_blank">оф.док.</a>
+                <div class="w-100"></div>
+                <p class="col-auto">
+                    классы: table, thead-light, table-striped, table-dark и т.д. см. полный саписок в оф.док.
+                </p>
+            </div>
+
+            <!--table-striped-->
+            <div class="row">
+                <div class="mt-3 col">
+                    <table class="table table-striped">
+                        <caption class="text-center">table-striped</caption>
+                        <thead class="thead-light">
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Age</th>
+                                <th>Text</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>John</td>
+                                <td>john@mail.com</td>
+                                <td>20</td>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Consequuntur corporis dolores earum id illo laborum maiores,
+                                    reprehenderit saepe totam unde?</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Jane</td>
+                                <td>john@mail.com</td>
+                                <td>20</td>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Consequuntur corporis dolores earum id illo laborum maiores,
+                                    reprehenderit saepe totam unde?</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Mike</td>
+                                <td>john@mail.com</td>
+                                <td>20</td>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Consequuntur corporis dolores earum id illo laborum maiores,
+                                    reprehenderit saepe totam unde?</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Jack</td>
+                                <td>john@mail.com</td>
+                                <td>20</td>
+                                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Consequuntur corporis dolores earum id illo laborum maiores,
+                                    reprehenderit saepe totam unde?</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!--table-dark-->
+            <div class="row">
+                <div class="mt-3 col">
+                    <table class="table table-striped table-hover table-dark">
+                        <caption class="text-center">Table-dark</caption>
+                        <thead class="">
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Age</th>
+                            <th>Text</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>John</td>
+                            <td>john@mail.com</td>
+                            <td>20</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Consequuntur corporis dolores earum id illo laborum maiores,
+                                reprehenderit saepe totam unde?</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Jane</td>
+                            <td>john@mail.com</td>
+                            <td>20</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Consequuntur corporis dolores earum id illo laborum maiores,
+                                reprehenderit saepe totam unde?</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Mike</td>
+                            <td>john@mail.com</td>
+                            <td>20</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Consequuntur corporis dolores earum id illo laborum maiores,
+                                reprehenderit saepe totam unde?</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Jack</td>
+                            <td>john@mail.com</td>
+                            <td>20</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Consequuntur corporis dolores earum id illo laborum maiores,
+                                reprehenderit saepe totam unde?</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!--Адаптивная таблица-->
+            <div class="row">
+                <div class="mt-3 col">
+                    <table class="table table-striped table-hover table-dark table-responsive">
+                        <caption class="text-center">Адаптивная таблица, scroll только для таблицы</caption>
+                        <thead class="">
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Age</th>
+                            <th>Text</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>John</td>
+                            <td>john@mail.com</td>
+                            <td>20</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Consequuntur corporis dolores earum id illo laborum maiores,
+                                reprehenderit saepe totam unde?</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Jane</td>
+                            <td>john@mail.com</td>
+                            <td>20</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Consequuntur corporis dolores earum id illo laborum maiores,
+                                reprehenderit saepe totam unde?</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Mike</td>
+                            <td>john@mail.com</td>
+                            <td>20</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Consequuntur corporis dolores earum id illo laborum maiores,
+                                reprehenderit saepe totam unde?</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Jack</td>
+                            <td>john@mail.com</td>
+                            <td>20</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Consequuntur corporis dolores earum id illo laborum maiores,
+                                reprehenderit saepe totam unde?</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="les-12">
+        <div class="container">
+            <br><br><hr>
+            <!--Кнопки-->
+            <div class="row justify-content-center">
+                <h2 class="col-auto">Урок 12</h2>
+                <div class="w-100"></div>
+                <h4 class="col-auto">Кнопки</h4>
+                <div class="w-100"></div>
+                <a class="col-auto"  href="#" target="_blank">оф.док.</a>
+                <div class="w-100"></div>
+                <p class="col-auto">
+                    Классы:
+                </p>
+            </div>
+
+            <!--Кнопка-->
+            <div class="row mt-3">
+                <div class="col-12">
+                    <button class="btn btn-primary">btn btn-primary</button>
+                    <button class="btn btn-outline-success">btn btn-outline-success</button>
+                    <button class="btn btn-info btn-sm">btn btn-info btn-sm</button>
+                    <button class="btn btn-danger btn-lg">btn btn-danger btn-lg</button>
+                    <a href="#" class="btn btn-warning" role="button">btn btn-warning</a>
+                    <div class="w-100"></div>
+                    <button class="btn btn-danger btn-block mt-3">btn btn-danger btn-block</button>
+                    <div class="btn-group mt-3" role="group" aria-label="Basic Example">
+                        <button class="btn btn-secondary">left</button>
+                        <button class="btn btn-secondary">center</button>
+                        <button class="btn btn-secondary">right</button>
+                    </div>
+                    <div class="btn-group-vertical mt-3" role="group" aria-label="Basic Example">
+                        <button class="btn btn-secondary">left</button>
+                        <button class="btn btn-secondary">center</button>
+                        <button class="btn btn-secondary">right</button>
+                    </div>
+                    <hr>
+                    <div class="btn-group" data-toggle="buttons">
+                        <label for="" class="btn btn-secondary">
+                            <input type="checkbox" id="check1"> Checkbox 1
+                        </label>
+                        <label for="" class="btn btn-secondary">
+                            <input type="checkbox" id="check2"> Checkbox 2
+                        </label>
+                        <label for="" class="btn btn-secondary">
+                            <input type="checkbox" id="check3"> Checkbox 3
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <!--Dropdown-->
+            <div class="row">
+                <h4 class="col-12 text-center">Dropdown and Dropup</h4>
+                <div class="col-3">
+                    <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Dropdown</button>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Link 1</a>
+                        <a href="#" class="dropdown-item">Link 2</a>
+                        <a href="#" class="dropdown-item">Link 3</a>
+                    </div>
+                </div>
+                <div class="col-3 dropup">
+                    <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Dropdown</button>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Link 1</a>
+                        <a href="#" class="dropdown-item">Link 2</a>
+                        <a href="#" class="dropdown-item">Link 3</a>
+                    </div>
+                </div>
+                <div class="col-3 btn-group dropup">
+                    <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Dropup</button>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Link 1</a>
+                        <a href="#" class="dropdown-item">Link 2</a>
+                        <a href="#" class="dropdown-item">Link 3</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="les-13">
+        <div class="container">
+            <br><br><hr>
+            <!--Карточки-->
+            <div class="row justify-content-center">
+                <h2 class="col-auto">Урок 13</h2>
+                <div class="w-100"></div>
+                <h4 class="col-auto">Компонент карточки в Bootstrap</h4>
+                <div class="w-100"></div>
+                <a class="col-auto"  href="#" target="_blank">оф.док.</a>
+                <div class="w-100"></div>
+                <p class="col-auto">
+                    Классы:
+                </p>
+            </div>
+            <hr>
+            <!--Карточки товаров-->
+            <div class="row mt-3">
+                <div class="col-md-4 mt-3">
+                    <div class="card">
+                        <img class="card-img-top" src="assets/images/min/300x200/03_earth.jpg" alt="">
+                        <div class="card-body">
+                            <h4 class="card-titlte">Product title</h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Ab aliquid distinctio dolore doloribus dolorum esse nobis
+                                nostrum odit quisquam repellat?</p>
+                            <a href="#" class="card-link">About ...</a></div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-3">
+                    <div class="card">
+                        <img class="card-img-top" src="assets/images/min/300x200/04_mars.jpg" alt="">
+                        <div class="card-body">
+                            <h4 class="card-titlte">Product title</h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Ab aliquid distinctio dolore doloribus dolorum esse nobis
+                                nostrum odit quisquam repellat?</p>
+                            <a href="#" class="card-link">About ...</a></div>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-3">
+                    <div class="card">
+                        <img class="card-img-top" src="assets/images/min/300x200/08_neptun.jpg" alt="">
+                        <div class="card-body">
+                            <h4 class="card-titlte">Product title</h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Ab aliquid distinctio dolore doloribus dolorum esse nobis
+                                nostrum odit quisquam repellat?</p>
+                            <a href="#" class="card-link">About ...</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-3"></div>
+            <div class="row my-5">
+                <h4 class="col-12 text-center">Карточки для постов блога</h4>
+                <div class="w-100"></div>
+                <div class="col-12">
+                    <div class="card my-3">
+                        <h4 class="card-header">Post title</h4>
+                        <div class="card-body">
+                            <img src="assets/images/min/kopernik-150x150.jpg" alt="" class="img-thumbnail float-left mr-3">
+                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Dignissimos ducimus explicabo id inventore sapiente sed voluptas voluptatibus.
+                                Aliquam itaque odio provident sequi voluptate.
+                                Aliquid, deserunt distinctio dolores ipsa magnam officiis rerum sequi veniam.
+                                Harum magnam neque obcaecati quasi. Accusamus, quisquam?</p>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Dignissimos ducimus explicabo id inventore sapiente sed voluptas voluptatibus.
+                                Aliquam itaque odio provident sequi voluptate.
+                                Aliquid, deserunt distinctio dolores ipsa magnam officiis rerum sequi veniam.
+                                Harum magnam neque obcaecati quasi. Accusamus, quisquam?</p>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Dignissimos ducimus explicabo id inventore sapiente sed voluptas voluptatibus.
+                                Aliquam itaque odio provident sequi voluptate.
+                                Aliquid, deserunt distinctio dolores ipsa magnam officiis rerum sequi veniam.
+                                Harum magnam neque obcaecati quasi. Accusamus, quisquam?</p>
+                            <a href="#" class="btn btn-primary float-right">Read More ...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card my-3">
+                        <h4 class="card-header">Post title</h4>
+                        <div class="card-body">
+                            <img src="assets/images/min/Galileo-Galilei-150x150.jpg" alt="" class="img-thumbnail float-left mr-3">
+                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Dignissimos ducimus explicabo id inventore sapiente sed voluptas voluptatibus.
+                                Aliquam itaque odio provident sequi voluptate.
+                                Aliquid, deserunt distinctio dolores ipsa magnam officiis rerum sequi veniam.
+                                Harum magnam neque obcaecati quasi. Accusamus, quisquam?</p>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Dignissimos ducimus explicabo id inventore sapiente sed voluptas voluptatibus.
+                                Aliquam itaque odio provident sequi voluptate.
+                                Aliquid, deserunt distinctio dolores ipsa magnam officiis rerum sequi veniam.
+                                Harum magnam neque obcaecati quasi. Accusamus, quisquam?</p>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Dignissimos ducimus explicabo id inventore sapiente sed voluptas voluptatibus.
+                                Aliquam itaque odio provident sequi voluptate.
+                                Aliquid, deserunt distinctio dolores ipsa magnam officiis rerum sequi veniam.
+                                Harum magnam neque obcaecati quasi. Accusamus, quisquam?</p>
+                            <a href="#" class="btn btn-primary float-right">Read More ...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="les-14">
+        <div class="container">
+            <br><br><hr>
+            <!--Модальные окна Bootstrap-->
+            <div class="row justify-content-center">
+                <h2 class="col-auto">Урок 14</h2>
+                <div class="w-100"></div>
+                <h4 class="col-auto">Модальные окна Bootstrap</h4>
+                <div class="w-100"></div>
+                <a class="col-auto"  href="#" target="_blank">оф.док.</a>
+                <div class="w-100"></div>
+                <p class="col-auto">
+                    Классы:
+                </p>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-12">
+                    <button class="btn btn-success" data-toggle="modal" data-target="#myModal">Open modal window by HTML data attributes</button>
+                    <button id="open" class="btn btn-success" >Open modal window by JS</button>
+                    <div class="modal fade" id="myModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-titile">Modal Title</h5>
+                                    <button class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex hic nobis quibusdam
+                                        sit soluta ullam. Animi eaque exercitationem facere iste laudantium modi
+                                        praesentium quae quo ullam ut. Cumque dolore doloremque est molestiae, numquam
+                                        odit pariatur provident quidem sapiente sint tempore.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-primary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+
+
+    </section>
+
+    <section class="les-15">
+        <div class="container">
+            <br><br><hr>
+            <!--Кастомизация Bootstrap-->
+            <div class="row justify-content-center">
+                <h2 class="col-auto">Урок 15</h2>
+                <div class="w-100"></div>
+                <h4 class="col-auto">Кастомизация Bootstrap</h4>
+                <div class="w-100"></div>
+                <a class="col-auto"  href="#" target="_blank">оф.док.</a>
+                <div class="w-100"></div>
+                <p class="col-auto">
+                    Классы:
+                </p>
+            </div>
+        </div>
+    </section>
+    <div class="div mh mt-5">отступ</div>
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+<!--<script-->
+        <!--src="https://code.jquery.com/jquery-3.4.1.min.js"-->
+        <!--integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="-->
+        <!--crossorigin="anonymous">-->
+<!--</script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>-->
+<script src="assets/js/poper.js"></script>
+
+<script src="assets/js/jquery-3.4.1.min.js"></script>
+<script src="assets/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+
+<script>
+    $('input[type=checkbox]').change(function() {
+        $('input[type=checkbox]').each(function() {
+            console.log($(this).attr('id'), $(this).prop('checked'))
+        })
+    });
+</script>
+<script>
+    $('#open').click(function() {
+        $('#myModal').modal();
+    });
+</script>
+</body>
+</html>

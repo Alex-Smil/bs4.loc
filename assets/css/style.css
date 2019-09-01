@@ -1,0 +1,51 @@
+@charset "UTF-8";
+body {
+  background-color: peachpuff; }
+
+.block1 {
+  background: #f1b0b7; }
+
+.block2 {
+  background: yellowgreen; }
+
+.block3 {
+  background: blueviolet; }
+
+.block4 {
+  background: goldenrod; }
+
+.block5 {
+  background: darkcyan; }
+
+.mh {
+  min-height: 100px;
+  background: #46143f;
+  margin-bottom: 20px; }
+
+.section1 {
+  background: url(../images/06_saturne.jpg) no-repeat center center;
+  background-size: cover;
+  height: 100vh; }
+  .section1 h2 {
+    color: #fff;
+    font-size: 3rem;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); }
+
+.section1 .row {
+  min-height: 100vh; }
+
+.media {
+  /*border: 1px solid black;*/
+  /*padding: 10px;*/ }
+
+/*Тоже самое что и class из BS4: img-fluid*/
+/*.les-10 img {*/
+/*width: 100%;*/
+/*height: auto;*/
+/*}*/
+caption {
+  caption-side: top; }
+
+/*# sourceMappingURL=style.css.map */
