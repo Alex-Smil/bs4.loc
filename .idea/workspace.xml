@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d8c5ff6-9c38-480b-9e3b-181308841fc0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/style.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/style.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.min.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -154,6 +147,19 @@
               <item name="bs4.loc" type="b2602c69:ProjectViewProjectNode" />
               <item name="bs4.loc" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bs4.loc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bs4.loc" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="style.css" type="620a8d5e:NestingTreeNode" />
+            </path>
+            <path>
+              <item name="bs4.loc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bs4.loc" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="scss" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -202,16 +208,15 @@
       <workItem from="1566923674604" duration="31671000" />
       <workItem from="1567091055735" duration="21662000" />
       <workItem from="1567231186939" duration="4158000" />
-      <workItem from="1567240634258" duration="25060000" />
+      <workItem from="1567240634258" duration="25385000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82551000" />
+    <option name="totallyTimeSpent" value="82876000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="241" y="3" width="1089" height="744" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
