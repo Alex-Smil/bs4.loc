@@ -16,8 +16,9 @@ let gulp = require('gulp'),
 function myScssCompiler() {
     return gulp.src('./assets/scss/**/*.scss') // откуда
                 .pipe(sourcemaps.init()) // инициализируем создание Source Maps
-                .pipe(sass().on("error", notify.onError())) // компилируем файл .css
-                .pipe(gulp.dest('./assets/css'))
+                //.pipe(sass().on("error", notify.onError())) // компилируем файл .css
+                //.pipe(gulp.dest('./assets/css'))
+                //.pipe(cssMin())
                 .pipe(sass({ outputStyle: 'compressed' }).on("error", notify.onError())) // компилируем сжатый файл .css
                 .pipe(rename({ suffix: '.min', prefix : '' })) // переименовываем файл в .min.css
                 .pipe(autoprefixer(['last 15 versions'])) // добавляем вендорные префиксы
