@@ -6,39 +6,41 @@ let gulp = require('gulp'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     cssMin = require('gulp-csso'),
+    cleancss     = require('gulp-clean-css'),
+    autoprefixer = require('gulp-autoprefixer'),
+    notify       = require('gulp-notify'),
     rename = require('gulp-rename'),
     BS = require('browser-sync').create();
 
 // style.sass
 function myScssCompiler() {
     return gulp.src('./assets/scss/**/*.scss') // откуда
-                // вместо concat-sass добавил '_' underscore к имени файлов в папке blocks , с ним файлы не компелируются, т.е. sass() их не затрагивает, все тянется из main.scss
-                .pipe(sass()) // Преобразуем в CSS
-                .pipe(gulp.dest('./assets/css')) // Сохраняем dev версию, потом опять берем
-                .pipe(cssMin()) // Минификация JS
-                .pipe(rename({suffix: '.min'})) // Так делают все норм библ-ки, добав суффикс .min. 
-                .pipe(gulp.dest('./assets/css')); // Сохраняем min версию 
+                .pipe(sourcemaps.init()) // инициализируем создание Source Maps
+                .pipe(sass({ outputStyle: 'compressed' }).on("error", notify.onError())) // компилируем сжатый файл .css
+                .pipe(rename({ suffix: '.min', prefix : '' })) // переименовываем файл в .min.css
+                .pipe(autoprefixer(['last 15 versions'])) // добавляем вендорные префиксы
+                .pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // удаляем все комментарии из кода
+                .pipe(sourcemaps.write('./')) // пути для записи SourceMaps - в данном случае карта SourceMaps будет добавлена прям в данный файл main.min.css в самом конце
+                .pipe(gulp.dest('./assets/css')); // перемещение скомпилированного файла main.min.css в папку app/css
 }
 
-function mapping() {
-    return gulp.src('./assets/scss/**/*.scss')
-            .pipe(sourcemaps.init())
-            .pipe(sass().on('error', sass.logError))
-            .pipe(sourcemaps.write('./'))
-            .pipe(gulp.dest('./assets/css'));
-}
+// function mapping() {
+//     return gulp.src('./assets/scss/**/*.scss')
+//             .pipe(sourcemaps.init())
+//             .pipe(sass().on('error', sass.logError))
+//             .pipe(sourcemaps.write('./'))
+//             .pipe(gulp.dest('./assets/css'));
+// }
 
-function mappingMin() {
-     return gulp.src('./assets/scss/**/*.scss')
-            .pipe(sourcemaps.init())
-            .pipe(sass().on('error', sass.logError))
-
-            .pipe(cssMin())
-            .pipe(rename({suffix: '.min'}))
-            
-            .pipe(sourcemaps.write('./'))
-            .pipe(gulp.dest('./assets/css'));
-}
+// function mappingMin() {
+//      return gulp.src('./assets/scss/**/*.scss')
+//             .pipe(sourcemaps.init())
+//             .pipe(sass().on('error', sass.logError))
+//             .pipe(cssMin())
+//             .pipe(rename({suffix: '.min'}))
+//             .pipe(sourcemaps.write('./'))
+//             .pipe(gulp.dest('./assets/css'));
+// }
 
 
 // bootstrap.sass
@@ -72,10 +74,10 @@ function watchFiles() {
 // Вместо task default делаем экспорт модулей, чтобы gulp увидел методы 
 // exports.html = html;
 exports.myScssCompiler = myScssCompiler;
-exports.mapping = mapping;
-exports.mappingMin = mappingMin;
+// exports.mapping = mapping;
+// exports.mappingMin = mappingMin;
 // exports.clear = clear;
 exports.watchFiles = watchFiles;
 exports.server = server;
 
-exports.default = gulp.parallel(myScssCompiler, mapping, mappingMin, watchFiles, server); // exports.clear = clear - убрал из списка так как удаляет JSON папку
+exports.default = gulp.parallel(myScssCompiler, watchFiles, server); // exports.clear = clear - убрал из списка так как удаляет JSON папку
