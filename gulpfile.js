@@ -70,7 +70,7 @@ function server() {
 // watch
 function watchFiles() {
     // gulp.watch(['./*.html'], html);
-    gulp.watch('./assets/scss/*.sass', myScssCompiler);
+    gulp.watch('./assets/scss/*.scss', myScssCompiler);
 }
 
 // Вместо task default делаем экспорт модулей, чтобы gulp увидел методы 

@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d8c5ff6-9c38-480b-9e3b-181308841fc0" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,8 +40,8 @@
       <file leaf-file-name="style.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/scss/style.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="23" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="23" />
+            <state relative-caret-position="22">
+              <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -99,8 +101,8 @@
         <option value="$PROJECT_DIR$/assets/sass/style.sass" />
         <option value="$PROJECT_DIR$/assets/bootstrap-4.3.1-dist/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/assets/sass/style.scss" />
-        <option value="$PROJECT_DIR$/assets/scss/style.scss" />
         <option value="$PROJECT_DIR$/assets/bootstrap-4.3.1-dist/css/bootstrap.min.css.map" />
+        <option value="$PROJECT_DIR$/assets/scss/style.scss" />
       </list>
     </option>
   </component>
@@ -208,15 +210,16 @@
       <workItem from="1566923674604" duration="31671000" />
       <workItem from="1567091055735" duration="21662000" />
       <workItem from="1567231186939" duration="4158000" />
-      <workItem from="1567240634258" duration="25385000" />
+      <workItem from="1567240634258" duration="25886000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82876000" />
+    <option name="totallyTimeSpent" value="83377000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="241" y="3" width="1089" height="744" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -361,8 +364,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/scss/style.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="23" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="23" />
+        <state relative-caret-position="22">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
         </state>
       </provider>
     </entry>
