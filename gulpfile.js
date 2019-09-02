@@ -16,15 +16,29 @@ let gulp = require('gulp'),
 function myScssCompiler() {
     return gulp.src('./assets/scss/**/*.scss') // откуда
                 .pipe(sourcemaps.init()) // инициализируем создание Source Maps
-                //.pipe(sass().on("error", notify.onError())) // компилируем файл .css
-                //.pipe(gulp.dest('./assets/css'))
+                .pipe(sass().on("error", notify.onError())) // компилируем файл .css
+                .pipe(gulp.dest('./assets/css'))
                 //.pipe(cssMin())
                 .pipe(sass({ outputStyle: 'compressed' }).on("error", notify.onError())) // компилируем сжатый файл .css
                 .pipe(rename({ suffix: '.min', prefix : '' })) // переименовываем файл в .min.css
                 .pipe(autoprefixer(['last 15 versions'])) // добавляем вендорные префиксы
                 .pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // удаляем все комментарии из кода
-                .pipe(sourcemaps.write('./')) // пути для записи SourceMaps - в данном случае карта SourceMaps будет добавлена прям в данный файл main.min.css в самом конце
+                .pipe(sourcemaps.write('./')) // пути для записи SourceMaps
                 .pipe(gulp.dest('./assets/css')); // перемещение скомпилированного файла main.min.css в папку app/css
+}
+
+function myBSCompiler() {
+    return gulp.src('./assets/bootstrap-4.3.1/scss/**/*.scss') // откуда
+                .pipe(sourcemaps.init()) // инициализируем создание Source Maps
+                .pipe(sass().on("error", notify.onError())) // компилируем файл .css
+                .pipe(gulp.dest('./assets/bootstrap-4.3.1/dist/css'))
+
+                .pipe(sass({ outputStyle: 'compressed' }).on("error", notify.onError())) // компилируем сжатый файл .css
+                .pipe(rename({ suffix: '.min', prefix : '' })) // переименовываем файл в .min.css
+                .pipe(autoprefixer(['last 15 versions'])) // добавляем вендорные префиксы
+                .pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // удаляем все комментарии из кода
+                .pipe(sourcemaps.write('./')) // пути для записи SourceMaps
+                .pipe(gulp.dest('./assets/bootstrap-4.3.1/dist/css')); // перемещение скомпилированного файла main.min.css в папку app/css
 }
 
 // function mapping() {
@@ -63,7 +77,7 @@ function server() {
     });
 
     // В одной строке отслеживаем все изменения который повлекут перезагрузку страницы
-    BS.watch('./**/*.*').on('change', function() {
+    BS.watch(['./assets/bootstrap-4.3.1/dist/css/bootstrap.min.css', './assets/css/style.min.css']).on('change', function() {
         BS.reload({stream: false});
     }); 
 }
@@ -71,12 +85,14 @@ function server() {
 // watch
 function watchFiles() {
     // gulp.watch(['./*.html'], html);
-    gulp.watch('./assets/scss/*.scss', myScssCompiler);
+    gulp.watch('./assets/scss/**/*.scss', myScssCompiler);
+    gulp.watch('./assets/bootstrap-4.3.1/scss/**/*.scss', myBSCompiler);
 }
 
 // Вместо task default делаем экспорт модулей, чтобы gulp увидел методы 
 // exports.html = html;
 exports.myScssCompiler = myScssCompiler;
+exports.myBSCompiler = myBSCompiler;
 // exports.mapping = mapping;
 // exports.mappingMin = mappingMin;
 // exports.clear = clear;
